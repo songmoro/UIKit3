@@ -12,8 +12,8 @@ class TravelTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(
-            UINib(nibName: "TravelTableViewCell", bundle: nil),
-            forCellReuseIdentifier: "TravelTableViewCell"
+            UINib(nibName: TravelTableViewCell.nibName, bundle: nil),
+            forCellReuseIdentifier: TravelTableViewCell.identifier
         )
     }
 
@@ -22,7 +22,7 @@ class TravelTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as? TravelTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.identifier, for: indexPath) as? TravelTableViewCell
         guard let cell else { return UITableViewCell() }
         
         return cell
