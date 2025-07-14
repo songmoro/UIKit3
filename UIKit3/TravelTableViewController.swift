@@ -10,11 +10,7 @@ import UIKit
 class TravelTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(
-            UINib(nibName: TravelTableViewCell.nibName, bundle: nil),
-            forCellReuseIdentifier: TravelTableViewCell.identifier
-        )
+        tableView.register(TravelTableViewCell.self)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,6 +20,9 @@ class TravelTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.identifier, for: indexPath) as? TravelTableViewCell
         guard let cell else { return UITableViewCell() }
+        
+        let text = "ㄱ\nㄴ\nㄷ\nㄹ\nㅁ\nㅂ\nㅅ\nㅇ\nㅈ\nㅊ\nㅋ\nㅌ\nㅍ\nㅎ"
+        cell.travelLabel.text = text
         
         return cell
     }

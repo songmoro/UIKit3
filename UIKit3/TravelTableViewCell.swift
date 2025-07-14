@@ -11,6 +11,8 @@ class TravelTableViewCell: UITableViewCell, HasNibName, HasIdentifier {
     static let nibName: String = "TravelTableViewCell"
     static let identifier: String = "TravelTableViewCell"
     
+    @IBOutlet var travelLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
