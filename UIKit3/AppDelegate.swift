@@ -6,10 +6,16 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        IQKeyboardManager.shared.isEnabled = true
+        
+        UITextField.appearance().backgroundColor = .systemGray6
+        UIButton.appearance().tintColor = .systemGreen
+        
         return true
     }
     
