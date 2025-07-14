@@ -18,7 +18,7 @@ class TravelTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.identifier, for: indexPath) as? TravelTableViewCell
+        let cell = tableView.dequeueReusableCell(TravelTableViewCell.self, for: indexPath)
         guard let cell else { return UITableViewCell() }
         
         let text = "ㄱ\nㄴ\nㄷ\nㄹ\nㅁ\nㅂ\nㅅ\nㅇ\nㅈ\nㅊ\nㅋ\nㅌ\nㅍ\nㅎ"

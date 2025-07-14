@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TravelTableViewCell: UITableViewCell, HasNibName, HasIdentifier {
+class TravelTableViewCell: CustomTableViewCell {
     static let nibName: String = "TravelTableViewCell"
     static let identifier: String = "TravelTableViewCell"
     
